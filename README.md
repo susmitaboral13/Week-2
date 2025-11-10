@@ -65,8 +65,3 @@ In **Week 2**, the following updates and improvements were made:
 
 
 
-
-
-
-Would you like me to make this report into a **formatted PDF** (2 pages, ready for submission)?
-I can generate it instantly with headings, table, and clean layout.

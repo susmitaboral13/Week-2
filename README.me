@@ -1,0 +1,147 @@
+Perfect start 👏 — that’s a great base for your **README.md**!
+Let’s complete it fully so your GitHub page looks clean, professional, and informative.
+
+Here’s a complete version you can just copy-paste into a new file named **`README.md`** in your project folder 👇
+
+---
+
+## 🩺 Chest X-ray Classification using CNN
+
+This project uses **Convolutional Neural Networks (CNNs)** to classify **chest X-ray images** into four categories:
+
+* 🧬 **Adenocarcinoma**
+* 🧫 **Large Cell Carcinoma**
+* 💨 **Normal**
+* 🧩 **Squamous Cell Carcinoma**
+
+---
+
+### 🧠 Model Architecture
+
+The model is built using **TensorFlow** and **Keras**, featuring:
+
+* Convolutional + MaxPooling layers for feature extraction
+* Batch Normalization and Dropout for better generalization
+* Fully Connected (Dense) layers for classification
+* Softmax activation for multi-class prediction
+
+---
+
+### 📊 Dataset
+
+The dataset structure follows this format:
+
+```
+Data/
+│
+├── train/
+│   ├── adenocarcinoma_left.lower.lobe_T2_N0_M0_Ib/
+│   ├── large.cell.carcinoma_left.hilum_T2_N2_M0_IIIa/
+│   ├── normal/
+│   └── squamous.cell.carcinoma_left.hilum_T1_N2_M0_IIIa/
+│
+├── test/
+│   ├── adenocarcinoma/
+│   ├── large.cell.carcinoma/
+│   ├── normal/
+│   └── squamous.cell.carcinoma/
+│
+└── valid/
+    ├── adenocarcinoma/
+    ├── large.cell.carcinoma/
+    ├── normal/
+    └── squamous.cell.carcinoma/
+```
+
+Each folder contains X-ray images in `.jpg` or `.png` format.
+
+---
+
+### ⚙️ Requirements
+
+Create a new file called **`requirements.txt`** and add:
+
+```
+tensorflow
+keras
+numpy
+matplotlib
+seaborn
+scikit-learn
+```
+
+Then install them with:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### 🚀 How to Run
+
+1. Clone this repository
+
+   ```bash
+   git clone https://github.com/your-username/Chest-Xray-CNN.git
+   cd Chest-Xray-CNN
+   ```
+
+2. Place your dataset in the `Data/` folder as shown above.
+
+3. Run the training notebook:
+   Open `chest_xray_classifier.ipynb` in Jupyter Notebook or VS Code and execute all cells.
+
+4. After training, the model will be saved as:
+
+   * `model.keras` → full model
+   * `model.weights.h5` → weights only
+
+---
+
+### 📈 Evaluation
+
+The model reports metrics such as:
+
+* Accuracy
+* Precision
+* Recall (Sensitivity)
+* F1 Score
+* Confusion Matrix
+
+Example:
+
+```
+Accuracy: 86%
+Precision: 84%
+Recall: 87%
+F1 Score: 85%
+```
+
+---
+
+### 🩻 Example Prediction
+
+```python
+img_path = r'D:\Chest X-ray\Data\test\normal\sample1.png'
+result, confidence = predict_chest_xray(img_path, model)
+print(f"Prediction: {result} ({confidence:.2f}% confidence)")
+```
+
+Output:
+
+```
+Prediction: Normal (99.5% confidence)
+```
+
+---
+
+### 🧾 Notes
+
+* `.gitignore` excludes large datasets and model weights from upload.
+* Model files (`.keras`, `.weights.h5`) can be shared separately if needed.
+
+---
+
+Would you like me to generate the **`requirements.txt`** file content automatically for your current environment (so it matches your exact installed versions)?
+That makes your project reproducible on any system.

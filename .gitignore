@@ -1,0 +1,17 @@
+# Ignore data folders (large)
+Data/
+train/
+test/
+valid/
+__pycache__/
+.ipynb_checkpoints/
+
+# Ignore model and weight files (large binaries)
+*.h5
+*.weights.h5
+*.keras
+
+# Ignore temporary and OS files
+.DS_Store
+*.tmp
+*.log
